@@ -18,7 +18,7 @@ const certifications = [
       "CSS",
     ],
     icon: <Award className="w-6 h-6 text-white" />,
-    image: "/certificates/fullstack.jpg",
+    image: "assets/certifications/Javafullstack-1.png",
   },
   {
     title: "Internship Completion Letter",
