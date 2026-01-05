@@ -4,7 +4,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("home");
 
-  // ✅ UPDATED SEQUENCE
   const menuItems = [
     "Home",
     "About",
@@ -49,15 +48,15 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20">
-      <div className="max-w-7xl mx-auto px-0 py-4 mr-3 flex justify-between  text-white">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-white">
 
         {/* Logo */}
-        <h1 className="text-xl   font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+        <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
           Rohan.dev
         </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-3 text-sm ml-12">
+        <ul className="hidden md:flex gap-3 text-sm">
           {menuItems.map((item) => {
             const id = item.toLowerCase();
             const isActive = active === id;
@@ -68,7 +67,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection(id)}
                   className={`
                     w-full h-full flex items-center justify-center
-                    font-semibold border-2 rounded-lg
+                    font-semibold border-2 rounded-lg text-white
                     transition-all duration-300
                     ${
                       isActive
@@ -86,7 +85,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-2xl"
+          className="md:hidden text-2xl text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
@@ -105,7 +104,7 @@ const Navbar = () => {
                 <button
                   onClick={() => scrollToSection(id)}
                   className={`
-                    w-full py-2 font-semibold rounded-lg
+                    w-full py-2 font-semibold rounded-lg text-white
                     transition-all duration-300
                     ${
                       isActive
@@ -126,3 +125,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

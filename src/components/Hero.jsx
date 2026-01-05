@@ -71,15 +71,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center px-4 sm:px-6 overflow-hidden" id="home">
-      
-      {/* Canvas */}
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center text-center px-4 sm:px-6 overflow-hidden"
+    >
+      {/* Canvas Background */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full -z-10"
       />
 
-      {/* Content */}
+      {/* Hero Content */}
       <div className="relative z-10 max-w-3xl">
         <h1 className="font-bold text-white leading-tight
           text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
@@ -102,18 +104,25 @@ const Hero = () => {
           (SPPU).
         </p>
 
+        {/* Buttons */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <button className="px-7 py-3 text-sm sm:text-base
-            bg-gradient-to-r from-blue-500 to-purple-600
-            rounded-lg hover:scale-105 transition text-white">
+          <a
+            href="#projects"
+            className="px-7 py-3 text-sm sm:text-base
+              bg-gradient-to-r from-blue-500 to-purple-600
+              rounded-lg hover:scale-105 transition text-white text-center"
+          >
             View Projects
-          </button>
+          </a>
 
-          <button className="px-7 py-3 text-sm sm:text-base
-            bg-gradient-to-r from-blue-500 to-purple-600
-            rounded-lg hover:scale-105 transition text-white">
+          <a
+            href="#contact"
+            className="px-7 py-3 text-sm sm:text-base
+              bg-gradient-to-r from-blue-500 to-purple-600
+              rounded-lg hover:scale-105 transition text-white text-center"
+          >
             Contact Me
-          </button>
+          </a>
         </div>
       </div>
     </section>
