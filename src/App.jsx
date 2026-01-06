@@ -33,11 +33,11 @@ function App() {
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black text-white">
-        <div className="w-full max-w-sm p-8 rounded-2xl border border-white/20 backdrop-blur-md bg-white/5">
-          <h2 className="text-2xl font-bold text-center mb-6">
+        <div className="w-full max-w-sm p-8 rounded-2xl border border-white/20 backdrop-contrast-75 bg-white/5">
+          <h2 className="text-2xl font-bold text-center mb-6 
+      bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Portfolio Login
           </h2>
-
           <input
             type="text"
             placeholder="Enter ID"
@@ -60,7 +60,7 @@ function App() {
 
           <button
             onClick={handleLogin}
-            className="w-full py-2 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition"
+            className="w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-black rounded-lg font-semibold hover:bg-gray-200 transition"
           >
             Login
           </button>
